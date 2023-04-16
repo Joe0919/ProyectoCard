@@ -1,0 +1,106 @@
+//cargar otros modulos o ficheros
+@use 'anidacion';
+
+//Declaracion de variables
+$color1:#f8b788;
+$color2:#f8b788;
+
+// :root {
+//   --color1: #f8b788;
+//   --color2: #f3641a;
+// }
+
+
+//ANIDACION EN SCSS
+
+body {
+  font-family: sans-serif;
+  background-color: $color1;
+  background-image: url(../img/header.jpg), url(../img/footer.jpg);
+  background-repeat: no-repeat, no-repeat;
+  /* background-position: right 50vw bottom 50vh, left 50vw top 50 vh; */
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .card {
+      background-color: #fff;
+      width: 328px;
+      border-radius: 16px;
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    
+      &-header {
+        width: 100%;
+        display: block;
+      }
+    
+      &-body {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        border-bottom: 2px solid $color2;
+
+        &-contentimg {
+          background-color: $color1;
+          border: 1px solid $color2;
+          box-shadow: 0px -10px 15px $color1;
+          border-radius: 50%;
+          margin-top: calc(-50px - 8px);
+
+          .img {
+            padding: 15px;
+          }
+        }
+    
+        &-title {
+          font-size: 2.8rem;
+
+          span {
+            color: $color2;
+          }
+        }
+      }
+    
+      &-footer {
+        display: flex;
+        justify-content: space-around;
+    
+        .item {
+          text-align: center;
+          padding: 1.7rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          
+          .poder{
+              font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
++USO DE MIXIN: Es una especie de Funcion
+@mixin caja_personal($fondo: white){
+-   font-family: sans-serif;
+-   background-color: $fondo;
+-   margin: 1rem;
+}
+
+Todo: USAMOS LA FUNCION
+caja{
+-    @include caja-personal($fondo: yellow) <-- agregar o no el parametro
+}
+
+body{
+! NO ES NECESARIO USAR LAA FUNCION CAL()
+  height: 400px + 154px;
+}
+
+*/

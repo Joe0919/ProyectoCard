@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --color1: #f8b788;
+  --color2: #f3641a;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f8b788;
+  background-image: url(../img/header.jpg), url(../img/footer.jpg);
+  background-repeat: no-repeat, no-repeat;
+  /* background-position: right 50vw bottom 50vh, left 50vw top 50 vh; */
+}
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .container .card {
+  background-color: #fff;
+  width: 328px;
+  border-radius: 16px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+body .container .card-header {
+  width: 100%;
+  display: block;
+}
+body .container .card-body {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border-bottom: 2px solid #f8b788;
+}
+body .container .card-body-contentimg {
+  background-color: #f8b788;
+  border: 1px solid #f8b788;
+  box-shadow: 0px -10px 15px #f8b788;
+  border-radius: 50%;
+  margin-top: -58px;
+}
+body .container .card-body-contentimg .img {
+  padding: 15px;
+}
+body .container .card-body-title {
+  font-size: 2.8rem;
+}
+body .container .card-body-title span {
+  color: #f8b788;
+}
+body .container .card-footer {
+  display: flex;
+  justify-content: space-around;
+}
+body .container .card-footer .item {
+  text-align: center;
+  padding: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .card-footer .item .poder {
+  font-size: 1.5rem;
+}
+
+/*
++USO DE MIXIN: Es una especie de Funcion
+! @mixin caja_personal($fondo: white){
+*   font-family: sans-serif;
+*   background-color: $fondo;
+*   margin: 1rem;
+! }
+
+  Todo: USAMOS LA FUNCION
+
+!  -caja{
+*    @include caja-personal($fondo: yellow) <-- agregar o no el parametro
+!  }
+
+
+
+*//*# sourceMappingURL=style.css.map */
